@@ -1,0 +1,80 @@
+# Redrob Hackathon — Submission Metadata Template
+#
+# Copy this file to your repo root as `submission_metadata.yaml` and fill it in.
+# The fields here should match what you submit via the portal at upload time.
+# Stage 3 review uses this file to verify your portal metadata.
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "Kirti_Uniyal"
+
+primary_contact:
+  name: "Kirti Uniyal"
+  email: "kirtiunniyal@gmail.com"
+  phone: "+91-9892752731"
+
+team_members:
+  - name: "Kirti Uniyal"
+    email: "kirtiunniyal@gmail.com"
+    role: "Developer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/kirttii/Kirti_Uniyal"
+
+sandbox_link: "https://colab.research.google.com/drive/1Sk1iSsybh1H2IlC5UhL58q97MCn25RpO?usp=sharing"
+
+reproduce_command: "python candidate_scoring.py"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Local Windows PC"
+  cpu_cores: 12
+  ram_gb: 16
+  python_version: "3.11"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+# Transparency only — declared use is NOT penalized. Be honest. Stage 5 interview
+# may verify these declarations against your code; declarations that contradict
+# your code or your interview are flagged.
+ai_tools_used:
+  - "ChatGPT"
+
+ai_usage_summary: |
+  ChatGPT was used for debugging Git issues, reviewing code,
+  improving documentation, troubleshooting runtime errors,
+  and discussing ranking methodology. All ranking logic,
+  implementation, testing, and submission generation were
+  executed locally by the participant.
+
+# ============================================================================
+# Approach summary (optional but recommended)
+# ============================================================================
+methodology_summary: |
+  Developed a hybrid semantic candidate ranking engine combining
+  SentenceTransformers embeddings, BM25 keyword relevance, skills,
+  experience, company quality, behavioral signals, career evidence,
+  and confidence estimation. The system generates recruiter-friendly
+  reasoning for every ranked candidate while remaining reproducible,
+  CPU-only, and compliant with the competition constraints.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
