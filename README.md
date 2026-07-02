@@ -2,41 +2,43 @@
 
 ## Adaptive Semantic Candidate Ranking Engine
 
-This repository contains my solution for the RedRob Data & AI Challenge.
+This repository contains my solution for the RedRob Data & AI Challenge. The objective of the project is to build an AI-powered candidate ranking system that goes beyond keyword matching and identifies candidates based on the overall relevance of their experience and profile.
 
-The goal of the project is to rank candidates intelligently by combining semantic similarity, keyword matching, career history, skills, behavioral signals, company quality, and confidence scoring instead of relying only on keyword search.
+## Project Overview
 
-## Approach
+The ranking engine combines semantic search with traditional information retrieval techniques to evaluate candidates across multiple dimensions. Instead of relying only on exact keyword matches, the system considers work experience, technical skills, career progression, company background, behavioral signals, and confidence in the generated ranking.
 
-The ranking pipeline uses:
+## Methodology
 
-- Sentence Transformers (all-MiniLM-L6-v2) for semantic matching
-- BM25 for keyword relevance
-- Hybrid scoring using:
-  - Career evidence
-  - Skills
+The ranking process consists of:
+
+- Semantic similarity using Sentence Transformers (`all-MiniLM-L6-v2`)
+- BM25-based keyword retrieval
+- Hybrid scoring framework incorporating:
+  - Career experience
+  - Technical skills
   - Company tier
-  - Recency
-  - Behavioral signals
-  - Confidence score
+  - Recent experience
+  - Behavioral indicators
+  - Confidence estimation
 
-Additional features include adaptive semantic thresholds, production evidence detection, career stability scoring, honeypot detection, and recruiter-friendly reasoning generation.
+Additional components include adaptive similarity thresholds, production evidence detection, career stability analysis, honeypot candidate filtering, and recruiter-oriented reasoning for each ranked profile.
 
-## Technologies
+## Technology Stack
 
 - Python
-- SentenceTransformers
+- Sentence Transformers
 - PyTorch
 - Pandas
 - NumPy
 - rank-bm25
 - tqdm
 
-## Repository
+## Repository Structure
 
-- `candidate_scoring_v26.py` – Main ranking pipeline
+- `candidate_scoring.py` – Main candidate ranking pipeline
 - `requirements.txt` – Project dependencies
-- `README.md` – Documentation
+- `README.md` – Project documentation
 
 ## Installation
 
@@ -44,19 +46,15 @@ Additional features include adaptive semantic thresholds, production evidence de
 pip install -r requirements.txt
 ```
 
-## Run
+## Execution
 
 ```bash
-python candidate_scoring_v26.py candidates.jsonl Kirti_Uniyal.csv
+python candidate_scoring.py candidates.jsonl Kirti_Uniyal.csv
 ```
 
 ## Output
 
-The script generates:
-
-`Kirti_Uniyal.csv`
-
-The output contains:
+The program generates a ranked CSV file containing:
 
 - Rank
 - Candidate ID
@@ -66,6 +64,6 @@ The output contains:
 
 ## Author
 
-Kirti Uniyal
+**Kirti Uniyal**
 
-Submission for the RedRob Data & AI Challenge.
+Developed as part of the **RedRob Data & AI Challenge**.
